@@ -94,6 +94,40 @@ const Index = () => {
     }
   ];
 
+  const handleGetStarted = () => {
+    console.log("Get Started button clicked");
+    // Add your signup/registration logic here
+  };
+
+  const handleWatchDemo = () => {
+    console.log("Watch Demo button clicked");
+    // Add your demo video/modal logic here
+  };
+
+  const handleStartTrial = (planName: string) => {
+    console.log(`Starting trial for ${planName} plan`);
+    // Add your trial signup logic here
+  };
+
+  const handleContactSales = () => {
+    console.log("Contact Sales button clicked");
+    // Add your contact sales logic here
+  };
+
+  const handleScheduleDemo = () => {
+    console.log("Schedule Demo button clicked");
+    // Add your demo scheduling logic here
+  };
+
+  const handleNavigation = (section: string) => {
+    console.log(`Navigating to ${section}`);
+    // Add smooth scroll to section logic here
+    const element = document.getElementById(section);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50">
       {/* Navigation */}
@@ -107,11 +141,11 @@ const Index = () => {
               <span className="text-xl font-bold text-gray-900">DueDiligence.ai</span>
             </div>
             <div className="flex items-center space-x-4">
-              <Button variant="ghost">Features</Button>
-              <Button variant="ghost">Pricing</Button>
-              <Button variant="ghost">About</Button>
+              <Button variant="ghost" onClick={() => handleNavigation('features')}>Features</Button>
+              <Button variant="ghost" onClick={() => handleNavigation('pricing')}>Pricing</Button>
+              <Button variant="ghost" onClick={() => handleNavigation('about')}>About</Button>
               <Button variant="outline">Sign In</Button>
-              <Button className="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700">
+              <Button className="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700" onClick={handleGetStarted}>
                 Get Started
               </Button>
             </div>
@@ -135,11 +169,11 @@ const Index = () => {
             market comparisons, and comprehensive due diligence tools designed for business buyers.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" className="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-lg px-8 py-6">
+            <Button size="lg" className="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-lg px-8 py-6" onClick={handleGetStarted}>
               Start Free Trial
               <ArrowRight className="ml-2 h-5 w-5" />
             </Button>
-            <Button size="lg" variant="outline" className="text-lg px-8 py-6">
+            <Button size="lg" variant="outline" className="text-lg px-8 py-6" onClick={handleWatchDemo}>
               Watch Demo
             </Button>
           </div>
@@ -147,7 +181,7 @@ const Index = () => {
       </section>
 
       {/* Features Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
+      <section id="features" className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-900 mb-4">
@@ -277,7 +311,7 @@ const Index = () => {
       </section>
 
       {/* Pricing Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-gray-50 to-blue-50">
+      <section id="pricing" className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-gray-50 to-blue-50">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-900 mb-4">
@@ -318,6 +352,7 @@ const Index = () => {
                   <Button 
                     className={`w-full ${plan.popular ? 'bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700' : ''}`}
                     variant={plan.popular ? "default" : "outline"}
+                    onClick={() => plan.name === "Professional" ? handleContactSales() : handleStartTrial(plan.name)}
                   >
                     {plan.name === "Professional" ? "Contact Sales" : "Start Free Trial"}
                   </Button>
@@ -338,11 +373,11 @@ const Index = () => {
             Join thousands of successful business buyers who trust DueDiligence.ai for their acquisitions
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" className="bg-white text-blue-600 hover:bg-gray-50 text-lg px-8 py-6">
+            <Button size="lg" className="bg-white text-blue-600 hover:bg-gray-50 text-lg px-8 py-6" onClick={handleGetStarted}>
               Start Your Free Trial
               <ArrowRight className="ml-2 h-5 w-5" />
             </Button>
-            <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-blue-600 text-lg px-8 py-6">
+            <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-blue-600 text-lg px-8 py-6" onClick={handleScheduleDemo}>
               Schedule Demo
             </Button>
           </div>
@@ -350,7 +385,7 @@ const Index = () => {
       </section>
 
       {/* Footer */}
-      <footer className="bg-gray-900 text-white py-12 px-4 sm:px-6 lg:px-8">
+      <footer id="about" className="bg-gray-900 text-white py-12 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="grid md:grid-cols-4 gap-8">
             <div>
@@ -367,8 +402,8 @@ const Index = () => {
             <div>
               <h4 className="font-semibold mb-4">Product</h4>
               <ul className="space-y-2 text-gray-400">
-                <li><a href="#" className="hover:text-white transition-colors">Features</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">Pricing</a></li>
+                <li><button onClick={() => handleNavigation('features')} className="hover:text-white transition-colors">Features</button></li>
+                <li><button onClick={() => handleNavigation('pricing')} className="hover:text-white transition-colors">Pricing</button></li>
                 <li><a href="#" className="hover:text-white transition-colors">API</a></li>
                 <li><a href="#" className="hover:text-white transition-colors">Integrations</a></li>
               </ul>
