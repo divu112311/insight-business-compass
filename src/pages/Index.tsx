@@ -9,69 +9,69 @@ const Index = () => {
     {
       icon: FileText,
       title: "Document Analysis",
-      description: "AI-powered parsing of financial documents with risk detection and anomaly flagging"
+      description: "AI-powered analysis of financial statements, contracts, and business records with risk detection"
     },
     {
       icon: TrendingUp,
       title: "Market Intelligence",
-      description: "Real-time comparable business insights and market trends analysis"
+      description: "Compare similar businesses for sale, recent sales data, and local market trends"
     },
     {
       icon: Shield,
-      title: "Risk Assessment",
-      description: "Comprehensive due diligence checklists and automated risk scoring"
+      title: "Due Diligence Support",
+      description: "Comprehensive checklists and automated risk assessment for business acquisitions"
     },
     {
       icon: Users,
-      title: "Team Collaboration",
-      description: "Share reports with advisors and partners with secure collaboration tools"
+      title: "Expert Collaboration",
+      description: "Share reports with lawyers, accountants, and business brokers securely"
     }
   ];
 
   const pricingPlans = [
     {
-      name: "Starter",
+      name: "First-Time Buyer",
       price: "$99",
       period: "/month",
-      description: "Perfect for individual investors and small deals",
+      description: "Perfect for individuals buying their first business",
       features: [
-        "Up to 5 business evaluations per month",
+        "Evaluate up to 3 businesses per month",
         "Basic financial document analysis",
-        "Market comparables database",
+        "Comparable sales database access",
         "Standard due diligence checklist",
         "Email support"
       ],
       popular: false
     },
     {
-      name: "Professional",
+      name: "Active Buyer",
       price: "$299",
       period: "/month",
-      description: "Ideal for active investors and small investment firms",
+      description: "Ideal for buyers evaluating multiple opportunities",
       features: [
-        "Up to 20 business evaluations per month",
+        "Evaluate up to 15 businesses per month",
         "Advanced AI risk assessment",
         "Real-time market alerts",
         "Custom due diligence workflows",
-        "Collaboration tools",
+        "Collaboration with advisors",
         "Priority support",
-        "API access"
+        "Market trend reports"
       ],
       popular: true
     },
     {
-      name: "Enterprise",
+      name: "Professional",
       price: "Custom",
       period: "",
-      description: "For large investment firms and institutional buyers",
+      description: "For business brokers and acquisition professionals",
       features: [
         "Unlimited business evaluations",
-        "White-label solutions",
+        "White-label client reports",
         "Custom integrations",
         "Dedicated account manager",
         "Advanced analytics dashboard",
         "SLA guarantees",
-        "On-premise deployment options"
+        "Training and onboarding"
       ],
       popular: false
     }
@@ -79,17 +79,17 @@ const Index = () => {
 
   const testimonials = [
     {
-      name: "Sarah Chen",
-      role: "Private Equity Partner",
-      company: "Meridian Capital",
-      content: "This platform cut our due diligence time by 60%. The AI insights are incredibly accurate.",
+      name: "Jennifer Walsh",
+      role: "Restaurant Owner",
+      company: "Previously Bought 3 Restaurants",
+      content: "This platform helped me avoid a terrible deal. The financial analysis caught red flags I would have missed.",
       rating: 5
     },
     {
-      name: "Michael Rodriguez",
-      role: "Business Broker",
-      company: "Elite Business Sales",
-      content: "The comparable business data is unmatched. My clients love the detailed market analysis.",
+      name: "David Kim",
+      role: "Manufacturing Business Owner",
+      company: "Bought Auto Parts Business",
+      content: "The comparable business data was invaluable for negotiating the right price. Saved me $50k on my purchase.",
       rating: 5
     }
   ];
@@ -123,16 +123,16 @@ const Index = () => {
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
           <Badge className="mb-6 bg-blue-50 text-blue-700 border-blue-200">
-            AI-Powered Due Diligence Platform
+            AI-Powered Business Buying Platform
           </Badge>
           <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6 leading-tight">
-            Make Smarter
-            <span className="bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent"> Investment </span>
-            Decisions
+            Buy Your Dream
+            <span className="bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent"> Business </span>
+            with Confidence
           </h1>
           <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
-            Streamline your business acquisition process with AI-powered document analysis, 
-            market intelligence, and comprehensive due diligence tools trusted by investors worldwide.
+            Make informed business acquisition decisions with AI-powered financial analysis, 
+            market comparisons, and comprehensive due diligence tools designed for business buyers.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button size="lg" className="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-lg px-8 py-6">
@@ -151,11 +151,11 @@ const Index = () => {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-900 mb-4">
-              Everything You Need for Due Diligence
+              Everything You Need to Buy Smart
             </h2>
             <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              Our comprehensive platform combines AI technology with market expertise to give you 
-              complete visibility into your investment opportunities.
+              Our comprehensive platform gives you the tools and insights needed to 
+              evaluate any business opportunity with confidence.
             </p>
           </div>
           
@@ -188,28 +188,28 @@ const Index = () => {
                 Market Intelligence
               </Badge>
               <h3 className="text-4xl font-bold text-gray-900 mb-6">
-                Comparable Business Insights That Matter
+                Know What Businesses Are Really Worth
               </h3>
               <p className="text-lg text-gray-600 mb-8">
-                Get real-time data on similar businesses, recent sales, and market trends. 
-                Our AI analyzes thousands of data points to give you accurate valuations and competitive intelligence.
+                Get access to real-time data on similar business sales, current listings, and market trends. 
+                Our AI analyzes thousands of transactions to help you negotiate the right price.
               </p>
               <div className="space-y-4">
                 <div className="flex items-center space-x-3">
                   <CheckCircle className="h-5 w-5 text-green-500" />
-                  <span className="text-gray-700">Recent sales and listings by industry</span>
+                  <span className="text-gray-700">Recent business sales in your area</span>
                 </div>
                 <div className="flex items-center space-x-3">
                   <CheckCircle className="h-5 w-5 text-green-500" />
-                  <span className="text-gray-700">Emerging competitor analysis</span>
+                  <span className="text-gray-700">Current listings and asking prices</span>
                 </div>
                 <div className="flex items-center space-x-3">
                   <CheckCircle className="h-5 w-5 text-green-500" />
-                  <span className="text-gray-700">Price benchmarks and valuation multiples</span>
+                  <span className="text-gray-700">Industry valuation benchmarks</span>
                 </div>
                 <div className="flex items-center space-x-3">
                   <CheckCircle className="h-5 w-5 text-green-500" />
-                  <span className="text-gray-700">AI-generated market trend summaries</span>
+                  <span className="text-gray-700">Market trend analysis and forecasts</span>
                 </div>
               </div>
             </div>
@@ -223,15 +223,15 @@ const Index = () => {
                   <div className="space-y-4">
                     <div className="flex justify-between items-center p-3 bg-gray-50 rounded-lg">
                       <span className="text-sm font-medium">Similar Businesses Sold</span>
-                      <span className="text-lg font-bold text-green-600">23</span>
+                      <span className="text-lg font-bold text-green-600">18</span>
                     </div>
                     <div className="flex justify-between items-center p-3 bg-gray-50 rounded-lg">
-                      <span className="text-sm font-medium">Average Multiple</span>
-                      <span className="text-lg font-bold text-blue-600">3.2x</span>
+                      <span className="text-sm font-medium">Average Sale Price</span>
+                      <span className="text-lg font-bold text-blue-600">$285K</span>
                     </div>
                     <div className="flex justify-between items-center p-3 bg-gray-50 rounded-lg">
-                      <span className="text-sm font-medium">Market Trend</span>
-                      <span className="text-lg font-bold text-indigo-600">↗ Growing</span>
+                      <span className="text-sm font-medium">Market Activity</span>
+                      <span className="text-lg font-bold text-indigo-600">↗ Active</span>
                     </div>
                   </div>
                 </div>
@@ -246,10 +246,10 @@ const Index = () => {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-900 mb-4">
-              Trusted by Investment Professionals
+              Trusted by Business Buyers
             </h2>
             <p className="text-xl text-gray-600">
-              See what our clients are saying about their experience
+              See what successful business owners are saying
             </p>
           </div>
           
@@ -284,7 +284,7 @@ const Index = () => {
               Choose Your Plan
             </h2>
             <p className="text-xl text-gray-600">
-              Flexible pricing options to fit your investment needs
+              Flexible pricing options for every type of business buyer
             </p>
           </div>
           
@@ -319,7 +319,7 @@ const Index = () => {
                     className={`w-full ${plan.popular ? 'bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700' : ''}`}
                     variant={plan.popular ? "default" : "outline"}
                   >
-                    {plan.name === "Enterprise" ? "Contact Sales" : "Start Free Trial"}
+                    {plan.name === "Professional" ? "Contact Sales" : "Start Free Trial"}
                   </Button>
                 </CardContent>
               </Card>
@@ -332,10 +332,10 @@ const Index = () => {
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-blue-600 to-indigo-600">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-4xl font-bold text-white mb-6">
-            Ready to Transform Your Due Diligence Process?
+            Ready to Find Your Perfect Business?
           </h2>
           <p className="text-xl text-blue-100 mb-8">
-            Join thousands of investors who trust DueDiligence.ai for their business evaluations
+            Join thousands of successful business buyers who trust DueDiligence.ai for their acquisitions
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button size="lg" className="bg-white text-blue-600 hover:bg-gray-50 text-lg px-8 py-6">
@@ -361,7 +361,7 @@ const Index = () => {
                 <span className="text-xl font-bold">DueDiligence.ai</span>
               </div>
               <p className="text-gray-400">
-                AI-powered due diligence platform for smarter investment decisions.
+                AI-powered due diligence platform for smart business buying decisions.
               </p>
             </div>
             <div>
