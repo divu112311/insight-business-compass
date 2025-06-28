@@ -31,7 +31,7 @@ const Index = () => {
   const pricingPlans = [
     {
       name: "First-Time Buyer",
-      price: "$99",
+      price: "$20",
       period: "/month",
       description: "Perfect for individuals buying their first business",
       features: [
@@ -45,7 +45,7 @@ const Index = () => {
     },
     {
       name: "Active Buyer",
-      price: "$299",
+      price: "$50",
       period: "/month",
       description: "Ideal for buyers evaluating multiple opportunities",
       features: [
